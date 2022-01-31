@@ -6,6 +6,7 @@ const exphbs = require("express-handlebars");
 
 //routes requirements
 const startRoute = require("../routes/startRoute");
+const todoRoute = require("../routes/todoRoute");
 const errorRoute = require("../routes/404Route");
 
 //initalize app
@@ -27,10 +28,12 @@ app.use(express.urlencoded({ extended: true }));
 
 //use routes
 app.use("/", startRoute);
+app.use("/todos", todoRoute);
 
 //error route, ALWAYS LAST!
 app.use("*", errorRoute);
 
+//server listening
 app.listen(8080, () => {
   console.log("Server is up at http://localhost:8080.");
 });

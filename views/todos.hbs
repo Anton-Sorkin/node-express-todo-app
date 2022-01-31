@@ -1,0 +1,7 @@
+{{! dont use ! on these pages, get get css from layout page }}
+<ul>
+  {{#each todos}}
+    <li><a href="/todos/{{id}}">{{todo}}</a></li>
+  {{/each}}
+  <a href="/todos/addTodo">Add a todo</a>
+</ul>
