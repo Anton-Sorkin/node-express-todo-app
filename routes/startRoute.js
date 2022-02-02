@@ -1,14 +1,15 @@
-//requirements
+//REQUIREMENTS
 const express = require("express");
 const router = express.Router();
 
-//get /localhost:8080/
+//GETS
 router.get("/", (req, res) => {
   res.render("index", {
-    title: "Home",
+    style: "main.css",
+    title: "start-page",
     message: "you are on home page.",
   });
 });
 
-//exports
+//EXPORTS
 module.exports = router;

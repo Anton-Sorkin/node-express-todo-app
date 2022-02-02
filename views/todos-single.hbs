@@ -1,4 +1,8 @@
-<h2>Todo {{todo}}</h2>
-<p>{{todos}}</p>
+{{>nav}}
 
-<a href="/todos/{{id}}/deleteTodo">remove todo</a>
+<h2>Todo {{todo.todo}}</h2>
+<p>{{todo.created}}</p>
+
+<a href="/todos/{{todo.id}}/deleteTodo">Remove todo</a>
+
+<a href="/todos/{{todo.id}}/edit">Edit the todo</a>

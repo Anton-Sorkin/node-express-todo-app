@@ -1,7 +1,12 @@
+{{>nav}}
+
 <h1>delete todo</h1>
+<h2>
+  {{todo.todo}}
+</h2>
 <p>
-  {{todo}}
+  {{todo.created}}
 </p>
-<form action="/todos/{{id}}/deleteTodo" method="post">
+<form action="/todos/{{todo.id}}/deleteTodo" method="post">
   <input type="submit" value="remove" />
 </form>

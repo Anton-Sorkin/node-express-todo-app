@@ -1,14 +1,17 @@
-//requirements
+//REQUIREMENTS
 const express = require("express");
 const router = express.Router();
 
-//get all non existing pages
+//GETS
+
+//gets all non existing pages
 router.get("*", (req, res) => {
   res.render("404", {
+    style: "main.css",
     title: "404",
     errorMessage: "Page not found.",
   });
 });
 
-//exports
+//EXPORTS
 module.exports = router;
