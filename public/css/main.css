@@ -10,11 +10,11 @@ body {
 }
 
 .home-nav {
-  background-color: aqua;
-  height: 50px;
+  height: 5vh;
   width: 100vw;
   display: flex;
   justify-content: space-around;
+  background-color: gray;
 }
 
 #home-start {
@@ -30,7 +30,6 @@ body {
 }
 
 .home-container {
-  background-color: rgb(75, 148, 75);
   width: 100vw;
   height: 100vh;
 }
@@ -51,16 +50,15 @@ body {
 .todos-container {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(75, 121, 105);
 }
 
 .todo-filters {
   display: flex;
   height: 50px;
   width: 100vw;
-  background-color: blueviolet;
   justify-content: space-around;
   align-items: center;
+  background-color: rgb(163, 163, 163);
 }
 
 .todo-create {
@@ -69,11 +67,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: brown;
 }
 .todos-list {
   width: 100vw;
-  background-color: cyan;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -82,7 +78,6 @@ body {
 .todo-empty {
   height: 200px;
   width: 100vw;
-  background-color: cyan;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,5 +97,61 @@ body {
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.addtodo-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addtodo-title {
+  padding: 15px;
+}
+.single-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.single-links {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.delete-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#delete-title {
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.edit-container {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.edit-form {
+  height: 150px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }

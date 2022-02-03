@@ -1,10 +1,14 @@
 {{>nav}}
 
+<div class="edit-container">
 <h2>edit the todo</h2>
 <form action="/todos/{{todo.id}}/edit" method="post">
-    <p>change todo to done</p>
+    <div class="edit-form">
+    <p>change todo to done:</p>
     <input class="done-input" type="checkbox" value="true" name="done" {{#if todo.done}}checked{{/if}}>
-    <p>change the text of this todo</p>
+    <p>change the text of this todo:</p>
     <input type="text" name="todo" placeholder="todo" value="{{todo.todo}}">
     <button type="submit">Change</button>
+    </div>
 </form>
+</div>

@@ -1,10 +1,13 @@
 {{>nav}}
+<div class="single-container">
+<h2>Todo: {{todo.todo}}</h2>
+<p>Time of creation: {{todo.created}}</p>
 
-<h2>Todo {{todo.todo}}</h2>
-<p>{{todo.created}}</p>
-
+<div class="single-links">
 <a href="/todos/{{todo.id}}/deleteTodo">Remove todo</a>
 
 <a href="/todos/{{todo.id}}/edit">Edit the todo</a>
 
 <a href="/todos">Back to list</a>
+</div>
+</div>

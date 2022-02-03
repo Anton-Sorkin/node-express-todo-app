@@ -3,27 +3,9 @@ const express = require("express");
 const router = express.Router();
 const todos = require("../data/todos");
 
-//FUNCTIONS
-function getNewId(list) {
-  let maxId = 0;
-  for (const item of list) {
-    if (item.id > maxId) {
-      maxId = item.id;
-    }
-  }
-  return maxId + 1;
-}
-
-function filterComplete(bool) {
-  let filteredTodos = todos.filter(function (product) {
-    // Filter the data array by looking at each product in it
-    //see if any of the keys have a value of true
-    return Object.keys(product).some(function (key) {
-      return product[key] === bool;
-    });
-  });
-  return filteredTodos;
-}
+//ULITS
+const { getNewId } = require("../utils/getNewId");
+const { filterCheck } = require("../utils/filterChecker");
 
 //GETS
 
@@ -40,11 +22,10 @@ router.get("/addTodo", (req, res) => {
     style: "main.css",
     title: "todo-add",
   });
-  console.log(todos);
 });
 
 router.get("/incomplete", (req, res) => {
-  const todo = filterComplete(false);
+  const todo = filterCheck(false);
   res.render("todos", {
     todos: todo,
     style: "main.css",
@@ -53,7 +34,7 @@ router.get("/incomplete", (req, res) => {
 });
 
 router.get("/complete", (req, res) => {
-  const todo = filterComplete(true);
+  const todo = filterCheck(true);
   res.render("todos", {
     todos: todo,
     style: "main.css",
@@ -112,7 +93,6 @@ router.post("/:id/edit", (req, res) => {
   todos[index].todo = req.body.todo;
   todos[index].done = Boolean(req.body.done);
 
-  console.log(req.body);
   res.redirect("/todos/" + id);
 });
 

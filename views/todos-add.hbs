@@ -1,8 +1,9 @@
 {{>nav}}
-
-<h1>Add Todo</h1>
+<div class="addtodo-container">
+<h1 class="addtodo-title">Add Todo</h1>
 <form action="/todos/addTodo" method="post">
   <input type="text" name="todo" />
   <input type="Datetime-local" name="created" hidden />
   <button type="submit">Add todo</button>
 </form>
+</div>
