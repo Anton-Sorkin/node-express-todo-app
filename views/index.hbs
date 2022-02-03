@@ -1,10 +1,11 @@
 {{!-- dont use ! on these pages, get get css from layout page --}}
+<div class="home-container">
 {{>nav}}
-
-{{>header}}
-<h1>
+<h1 id="home-title">
   {{title}}
 </h1>
-<p>
+{{>header}}
+<p id="home-message">
   {{message}}
 </p>
+</div>

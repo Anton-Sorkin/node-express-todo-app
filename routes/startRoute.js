@@ -6,8 +6,8 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.render("index", {
     style: "main.css",
-    title: "start-page",
-    message: "you are on home page.",
+    title: "Anton Sorkin ",
+    message: "Feel free to chech out my Todo app!",
   });
 });
 

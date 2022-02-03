@@ -1,24 +1,23 @@
 {{! dont use ! on these pages, get get css from layout page }}
-
+<div class="todos-container">
 {{>nav}}
 
-<div class="todo-filters">
-<p>Filter:</p>
-<a href="/todos/">All</a>
-<a href="/todos/complete">Complete</a>
-<a href="/todos/incomplete">Incomplete</a>
+  <div class="todo-filters">
+  <p>Filter:</p>
+  <a href="/todos/">All</a>
+  <a href="/todos/complete">Complete</a>
+  <a href="/todos/incomplete">Incomplete</a>
+  </div>
+  {{#if todos}}
+    <ul class="todos-list">
+      {{#each todos}}
+        <a class="todo-{{done}}" href="/todos/{{id}}"><li>{{todo}}</li></a>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p class="todo-empty">No current todos!</p>
+  {{/if}}
+  <div class="todo-create">
+  <a href="/todos/addTodo">Add a todo</a>
+  </div>
 </div>
-
-<div class="todo-create">
-<a href="/todos/addTodo">Add a todo</a>
-</div>
-
-{{#if todos}}
-  <ul class="todos-list">
-    {{#each todos}}
-      <a class="todo-{{done}}" href="/todos/{{id}}"><li>{{todo}}</li></a>
-    {{/each}}
-  </ul>
-{{else}}
-  <p>Empty!</p>
-{{/if}}
